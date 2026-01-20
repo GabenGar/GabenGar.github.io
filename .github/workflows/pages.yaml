@@ -49,11 +49,11 @@ jobs:
               ${{ runner.os }}-turbo-
 
       - name: Install dependencies
-        working-directory: todos
+        working-directory: ./todos
         run: npm ci
 
       - name: Build pages
-        working-directory: todos
+        working-directory: ./todos
         run: npm run build-frontend
         env:
           NEXT_PUBLIC_SITE_BASE_URL: ${{ steps.setup_pages.outputs.base_path }}
