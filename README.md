@@ -1,11 +1,11 @@
-# GabenGar.github.io
+# gabengar.github.io
 
 ## Develop
 
 ### Clone the project
 
 ```sh
-git clone --recurse-submodules https://github.com/GabenGar/GabenGar.github.io.git
+git clone --recurse-submodules https://github.com/GabenGar/gabengar.github.io.git
 git submodule update --init --recursive
 ```
 
@@ -13,6 +13,28 @@ git submodule update --init --recursive
 
 ```sh
 git submodule update --remote
+```
+
+### Pushing
+
+Fail if any of the submodules aren't pushed:
+```sh
+git push --recurse-submodules=check
+```
+
+Set this as default behaviour:
+```sh
+git config push.recurseSubmodules check
+```
+
+Push submodules first before pushing the main repo:
+```sh
+git push --recurse-submodules=on-demand
+```
+
+Set this as default behaviour:
+```sh
+git config push.recurseSubmodules on-demand
 ```
 
 After pull:
